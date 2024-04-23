@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfChat_1._0.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfChat_1._0"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="400">
+    <Grid Background="#303030">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#5e5e5e" Width="300" Height="150">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5 30 5 5">
+                <TextBlock FontSize="16" Text="Логин:" Style="{DynamicResource TextBlock_1}" Width="70"></TextBlock>
+                <TextBox x:Name="TxtLogin" Style="{DynamicResource TextBox_1}" Background="#303030" FontSize="16" Width="180"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                <TextBlock FontSize="16" Style="{DynamicResource TextBlock_1}" Text="Пароль:" Width="70"></TextBlock>
+                <TextBox x:Name="TxtPassword" Background="#303030" Style="{DynamicResource TextBox_1}" FontSize="16" Width="180"></TextBox>
+            </StackPanel>
+
+            <Button x:Name="BtnEnter" Style="{DynamicResource Button_1}" FontFamily="Comic Sans MS" Background="Black" Click="BtnEnter_Click" FontSize="16" Content="Войти" Margin="5" Width="100"></Button>
+            
+        </StackPanel>
+
+        <Button x:Name="BtnReg" Click="BtnReg_Click" FontSize="16" FontFamily="Comic Sans MS" Style="{DynamicResource Button_1}" Content="Зарегистрироваться" Margin="5" Width="170" Height="30" Grid.Row="2"></Button>
+
+    </Grid>
+</Window>
